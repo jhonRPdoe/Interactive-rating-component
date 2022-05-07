@@ -126,6 +126,7 @@ footer {
 .button:hover {
     color: white;
     background-color: hsl(216, 12%, 54%);
+    cursor: pointer;
 }
 
 .container-popup {
@@ -169,4 +170,15 @@ footer {
     padding: 10px;
     max-width: 400px;
     color: hsl(217, 12%, 63%);
+}
+
+.popin {
+    display: none;
+    position: absolute;
+}
+
+.botao-clicado {
+    background-color: hsl(25, 97%, 53%);
+    color: #fff;
+    cursor: pointer;
 }
