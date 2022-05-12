@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [ My Github Repo](https://github.com/jhonRPdoe/Interactive-rating-component)
+- Solution URL: [ Live site](https://jhonrpdoe.github.io/Interactive-rating-component/)
 
 ## My process
 
