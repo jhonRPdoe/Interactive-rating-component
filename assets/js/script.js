@@ -1,29 +1,31 @@
+// FUNÇÃO PRINCIPAL PARA O SISTEMA
 function raitingSystem() {
+    // VARIAVEIS GLOBAIS
     const button1 = document.querySelector('.btn1');
     const button2 = document.querySelector('.btn2');
     const button3 = document.querySelector('.btn3');
     const button4 = document.querySelector('.btn4');
     const button5 = document.querySelector('.btn5');
     const formulario = document.querySelector('.formulario');
-
+// CHAMADA DA FUNÇÃO DE SELEÇÃO DOS NÚMEROS
     numSelect();
-    
+//EVENTO PARA CHAMAR A FUNÇÃO DE SUBMIT, RETIRAR O EVENTO PADRÃO E ADICIONAR O POPUP
     formulario.addEventListener('submit', e => {
         handleSubmit(e);
         popin(e);
     });
-
+//EVENTO PARA FECHAR O POPUP AO CLICAR FORA DO CONTAINER
     window.addEventListener('click', function(e){
         let containerPopup = document.querySelector('.container-popup')
         if (!document.querySelector('.container-popup').contains(e.target)){
             containerPopup.classList.remove('popin');
         }
     });
-
+//EVENTO PARA IMPEDIR O PROCESSO PADRÃO DO FORMULÁRIO
     function handleSubmit (e) {
         e.preventDefault();
     } 
-
+//PARA FAZER O POPUP DE AGRADECIMENTO VISÍVEL 
     function popin (e) {
         let containerPopup = document.querySelector('.container-popup');
 
@@ -31,7 +33,7 @@ function raitingSystem() {
             containerPopup.classList.add('popin');
         } 
     }
-    
+// FUNÇÃO PARA SELEÇÃO DOS NÚMEROS, PARA TORNAR O BOTÃO DE SUBMIT VISÍVEL E ADICIONAR O TEXTO AO POPUP 
     function numSelect () {
         button1.addEventListener('click', e => {
             if (!button1.classList.contains('botao-clicado')) { button1.classList.add('botao-clicado') }
@@ -125,4 +127,5 @@ function raitingSystem() {
     }
     
 }
+//CHAMADA DA FUNÇÃO PRINCIPAL DO SISTEMA
 raitingSystem();
